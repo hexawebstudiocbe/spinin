@@ -1,0 +1,63 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface-light);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-red);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-surface-light);
+}
+
+.iconWrapper {
+  color: var(--color-red);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.card:hover .iconWrapper {
+  border-color: var(--color-red);
+  background-color: rgba(229, 46, 45, 0.1);
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1;
+}
+
+.link {
+  color: var(--color-red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-white);
+}

@@ -1,0 +1,116 @@
+.section {
+  background-color: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.iconBox {
+  background-color: var(--color-surface-light);
+  color: var(--color-red);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.detailTitle {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.detailText {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.phoneText {
+  color: var(--color-red);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.socials {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.socialBtn:hover {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+
+.mapContainer {
+  height: 100%;
+  min-height: 400px;
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--spacing-lg);
+}
+
+.mapBtn {
+  background-color: var(--color-red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mapContainer {
+    min-height: 300px;
+  }
+}

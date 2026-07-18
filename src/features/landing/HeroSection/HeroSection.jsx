@@ -1,0 +1,48 @@
+import { Button } from '../../../components/ui/Button/Button';
+import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import styles from './HeroSection.module.css';
+
+export const HeroSection = () => {
+  const { elementRef, isVisible } = useIntersectionObserver();
+
+  return (
+    <section id="home" className={styles.hero} ref={elementRef}>
+
+      {/* Right Side: Car Image */}
+      <div className={`${styles.imageWrapper} animate-slide-in-right ${isVisible ? 'is-visible' : ''}`}>
+        <img src="/ferrari_bg.png" alt="Premium Sports Car" className={styles.carImage} />
+      </div>
+
+      <div className={styles.heroContainer}>
+
+        {/* Left Side: Text Content */}
+        <div className={styles.content}>
+
+          <h1 className={`${styles.title} animate-slide-in-left stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+            Precision Protection<br />
+            Drive Clean,<br />
+            Drive Proud!
+          </h1>
+
+          <div className={`${styles.descriptionBlock} animate-slide-in-left stagger-2 ${isVisible ? 'is-visible' : ''}`}>
+            <span className={styles.highlightText}>Clean | Protect | Perfect </span><br />
+            <span className={styles.descriptionText}>
+              Experience the ultimate standard in premium automotive care.<br />
+              Professional detailing and long-term protection systems in the<br />
+              heart of Coimbatore.
+            </span>
+          </div>
+
+          <div className={`${styles.actions} animate-slide-in-left stagger-3 ${isVisible ? 'is-visible' : ''}`}>
+            <Button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+              View Services
+            </Button>
+            <Button variant="outline" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+              Our Process
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

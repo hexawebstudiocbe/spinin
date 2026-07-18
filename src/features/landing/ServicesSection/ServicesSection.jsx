@@ -1,0 +1,119 @@
+import React, { useState } from 'react';
+import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
+import { Card } from '../../../components/ui/Card/Card';
+import { ServiceModal } from '../../../components/ui/ServiceModal/ServiceModal';
+import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import styles from './ServicesSection.module.css';
+
+const services = [
+  {
+    title: 'CERAMIC COATING',
+    description: 'Ultra-hydrophobic liquid polymer for long-lasting gloss and protection.',
+    image: '/service_ceramic.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+    )
+  },
+  {
+    title: 'GRAPHENE COATING',
+    description: 'The pinnacle of protection with superior heat resistance and durability.',
+    image: '/service_graphene.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+    )
+  },
+  {
+    title: 'PPF (PROTECTION FILM)',
+    description: 'Self-healing invisible shield against rock chips and road debris.',
+    image: '/service_ppf.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    )
+  },
+  {
+    title: 'SUNFILMS',
+    description: 'High-performance window tinting for heat rejection and privacy.',
+    image: '/service_sunfilm.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    )
+  },
+  {
+    title: 'PAINT CORRECTION',
+    description: 'Removing swirl marks and defects to reveal a mirror-like finish.',
+    image: '/service_paint.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg>
+    )
+  },
+  {
+    title: 'INTERIOR DETAILING',
+    description: 'Deep cleaning and conditioning for a hygienic, fresh cabin.',
+    image: '/service_interior.png',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="10" cy="20.5" r="1"></circle><circle cx="18" cy="20.5" r="1"></circle><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"></path></svg>
+    )
+  },
+  {
+    title: 'ECO WASH',
+    description: 'Water-efficient professional hand wash with pH-neutral solutions.',
+    image: '/ferrari_bg.png', // Fallback since image generation quota reached
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+    )
+  },
+  {
+    title: 'TIRE & RIM CARE',
+    description: 'Degreasing and protective dressing for wheels and arches.',
+    image: '/ferrari_bg.png', // Fallback since image generation quota reached
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="21.17" y1="8" x2="12" y2="8"></line><line x1="3.95" y1="6.06" x2="8.54" y2="14"></line><line x1="10.88" y1="21.94" x2="15.46" y2="14"></line></svg>
+    )
+  }
+];
+
+export const ServicesSection = () => {
+  const { elementRef, isVisible } = useIntersectionObserver();
+  const [selectedService, setSelectedService] = useState(null);
+
+  return (
+    <>
+      <section id="services" className={`section-padding ${styles.section}`} ref={elementRef}>
+        <div className={`container ${styles.headerWrapper}`}>
+          <SectionTitle 
+            subtitle="OUR EXPERTISE" 
+            title="SPECIALIZED SERVICES" 
+            className={`animate-fade-in-up ${isVisible ? 'is-visible' : ''}`}
+          />
+          <p className={`${styles.headerText} animate-fade-in-up stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+            From daily drivers to exotic supercars, we provide tailored protection packages for every automotive need.
+          </p>
+        </div>
+
+        <div className={`container ${styles.grid}`}>
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className={`animate-fade-in-up stagger-${(index % 4) + 1} ${isVisible ? 'is-visible' : ''}`}
+            >
+              <Card 
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                linkText="View"
+                onClick={() => setSelectedService(service)}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+      
+      {selectedService && (
+        <ServiceModal 
+          service={selectedService} 
+          onClose={() => setSelectedService(null)} 
+        />
+      )}
+    </>
+  );
+};

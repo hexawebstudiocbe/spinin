@@ -1,0 +1,58 @@
+.section {
+  background-color: var(--color-surface-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Override the SectionTitle align just for this via composition if needed, but we used a wrapper */
+
+.text {
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xl);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2xl);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  color: var(--color-red);
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.statLabel {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+}

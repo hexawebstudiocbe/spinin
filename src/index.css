@@ -1,0 +1,59 @@
+@import './styles/variables.css';
+@import './styles/animations.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reusable Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Utility classes */
+.text-red {
+  color: var(--color-red);
+}
+
+.text-gray {
+  color: var(--color-text-secondary);
+}
+
+.section-padding {
+  padding: var(--spacing-3xl) 0;
+}
