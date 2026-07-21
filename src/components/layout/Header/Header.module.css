@@ -35,7 +35,7 @@
 }
 
 .logoImage {
-  height: 40px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
   width: auto;
   object-fit: contain;
   border-radius: 4px; /* Optional, if the logo needs rounded corners */

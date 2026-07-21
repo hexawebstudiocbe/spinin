@@ -18,13 +18,13 @@ export const HeroSection = () => {
         {/* Left Side: Text Content */}
         <div className={styles.content}>
 
-          <h1 className={`${styles.title} animate-slide-in-left stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+          <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`}>
             Precision Protection<br />
             Drive Clean,<br />
             Drive Proud!
           </h1>
 
-          <div className={`${styles.descriptionBlock} animate-slide-in-left stagger-2 ${isVisible ? 'is-visible' : ''}`}>
+          <div className={`${styles.descriptionBlock} animate-typewriter stagger-2 ${isVisible ? 'is-visible' : ''}`}>
             <span className={styles.highlightText}>Clean | Protect | Perfect </span><br />
             <span className={styles.descriptionText}>
               Experience the ultimate standard in premium automotive care.<br />
@@ -33,7 +33,7 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          <div className={`${styles.actions} animate-slide-in-left stagger-3 ${isVisible ? 'is-visible' : ''}`}>
+          <div className={`${styles.actions} animate-premium stagger-3 ${isVisible ? 'is-visible' : ''}`}>
             <Button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               View Services
             </Button>

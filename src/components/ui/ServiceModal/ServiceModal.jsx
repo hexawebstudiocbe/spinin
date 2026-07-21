@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../Button/Button';
 import styles from './ServiceModal.module.css';
+import appData from '../../../data/appData.json';
 
 export const ServiceModal = ({ service, onClose }) => {
   const [formData, setFormData] = useState({
@@ -59,56 +60,20 @@ export const ServiceModal = ({ service, onClose }) => {
             <p className={styles.formSubtitle}>Fill out the details below and we'll connect via WhatsApp.</p>
             
             <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name">Full Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  required 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  required 
-                  value={formData.phone} 
-                  onChange={handleChange} 
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="vehicle">Vehicle Make & Model</label>
-                <input 
-                  type="text" 
-                  id="vehicle" 
-                  name="vehicle" 
-                  required 
-                  value={formData.vehicle} 
-                  onChange={handleChange} 
-                  placeholder="e.g. BMW M3"
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="date">Preferred Date</label>
-                <input 
-                  type="date" 
-                  id="date" 
-                  name="date" 
-                  required 
-                  value={formData.date} 
-                  onChange={handleChange} 
-                />
-              </div>
+              {appData.formFields.map((field) => (
+                <div key={field.id} className={styles.formGroup}>
+                  <label htmlFor={field.id}>{field.label}</label>
+                  <input 
+                    type={field.type} 
+                    id={field.id} 
+                    name={field.name} 
+                    required={field.required} 
+                    value={formData[field.name] || ''} 
+                    onChange={handleChange} 
+                    placeholder={field.placeholder}
+                  />
+                </div>
+              ))}
 
               <Button type="submit" className={styles.submitBtn}>
                 Book Now via WhatsApp

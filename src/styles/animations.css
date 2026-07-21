@@ -84,3 +84,84 @@
 .animate-slide-in-right.is-visible {
   animation: slideInRight 0.8s var(--transition-slow) forwards;
 }
+
+/* Premium Text Reveal Animation */
+@keyframes premiumReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-premium {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  will-change: transform, opacity, filter;
+}
+
+.animate-premium.is-visible {
+  animation: premiumReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3D Flip Animation */
+@keyframes flipInX {
+  0% {
+    transform: perspective(600px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(600px) rotateX(-20deg);
+  }
+  60% {
+    transform: perspective(600px) rotateX(10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(600px) rotateX(-5deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-flip-in {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  transform-origin: center bottom;
+}
+
+.animate-flip-in.is-visible {
+  animation: flipInX 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* Typewriter / Wiping Reveal Animation */
+@keyframes typeWriterReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+.animate-typewriter {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animate-typewriter.is-visible {
+  animation: typeWriterReveal 1.5s ease-in-out forwards;
+}
