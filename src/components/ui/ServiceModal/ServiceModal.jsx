@@ -18,10 +18,16 @@ export const ServiceModal = ({ service, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     const whatsappNumber = '919994534744'; // Replace with actual number
 
     const message =
       `Hi, I would like to book a service.%0a%0a` +
+=======
+    const whatsappNumber = '916383157300'; // Replace with actual number
+    
+    const message = `Hi, I would like to book a service.%0a%0a` +
+>>>>>>> 886fd66 (feat: implement About section, Service booking modal, and Netlify configuration)
       `*Service:* ${service.title}%0a` +
       `*Name:* ${formData.name}%0a` +
       `*Phone:* ${formData.phone}%0a` +
