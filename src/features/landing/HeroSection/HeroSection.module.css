@@ -135,7 +135,7 @@
   }
 
   .carImage {
-    max-width: 100%;
+    max-width: 0%;
     transform: scale(1.2);
   }
 }
