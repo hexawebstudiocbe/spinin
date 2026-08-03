@@ -30,6 +30,7 @@ export const Header = () => {
         </div>
         
         <nav className={styles.nav}>
+          <button onClick={() => scrollToSection('story')} className={styles.navLink}>Our Story</button>
           <button onClick={() => scrollToSection('about')} className={styles.navLink}>About Us</button>
           <button onClick={() => scrollToSection('services')} className={styles.navLink}>Services</button>
           <button onClick={() => scrollToSection('contact')} className={styles.navLink}>Location</button>

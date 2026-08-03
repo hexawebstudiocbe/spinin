@@ -1,6 +1,7 @@
 import { Header } from './components/layout/Header/Header';
 import { Footer } from './components/layout/Footer/Footer';
 import { HeroSection } from './features/landing/HeroSection/HeroSection';
+import { OurStorySection } from './features/landing/OurStorySection/OurStorySection';
 import { HighlightSection } from './features/landing/HighlightSection/HighlightSection';
 import { ServicesSection } from './features/landing/ServicesSection/ServicesSection';
 import { AboutSection } from './features/landing/AboutSection/AboutSection';
@@ -14,6 +15,7 @@ function App() {
       
       <main>
         <HeroSection />
+        <OurStorySection />
         <HighlightSection />
         <AboutSection />
         <ServicesSection />

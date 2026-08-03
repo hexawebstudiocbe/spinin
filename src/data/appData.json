@@ -2,51 +2,99 @@
   "services": [
     {
       "title": "CERAMIC COATING",
-      "description": "Ultra-hydrophobic liquid polymer for long-lasting gloss and protection.",
+      "description": "Ceramic coating forms a hard, transparent protective layer over your vehicle's clear coat. It bonds chemically with the paint, making the surface hydrophobic (water-repellent) and resistant to UV rays, dirt, bird droppings, tree sap, and chemical stains.",
+      "whatItDoes": "Ceramic coating forms a hard, transparent protective layer over your vehicle's clear coat. It bonds chemically with the paint, making the surface hydrophobic (water-repellent) and resistant to UV rays, dirt, bird droppings, tree sap, and chemical stains.",
+      "realLifeExample": "Imagine rain falling on a freshly waxed leaf. The water forms beads and rolls off. Ceramic coating does the same on your car. Instead of dirt sticking to the paint, most of it washes away easily, keeping your vehicle cleaner for longer.",
       "image": "/service_ceramic.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>"
     },
     {
       "title": "GRAPHENE COATING",
-      "description": "The pinnacle of protection with superior heat resistance and durability.",
+      "description": "Graphene coating is an advanced version of ceramic coating. It provides better heat dissipation, improved water repellency, reduced water spotting, and longer-lasting paint protection.",
+      "whatItDoes": "Graphene coating is an advanced version of ceramic coating. It provides better heat dissipation, improved water repellency, reduced water spotting, and longer-lasting paint protection.",
+      "realLifeExample": "After parking your black car in the hot sun, ceramic coating protects the paint, but graphene also helps reduce heat buildup and minimizes water spots after rain or washing.",
       "image": "/service_graphene.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\"></line></svg>"
     },
     {
-      "title": "PPF (PROTECTION FILM)",
-      "description": "Self-healing invisible shield against rock chips and road debris.",
+      "title": "PAINT PROTECTION FILM (PPF)",
+      "description": "PPF is a thick, transparent polyurethane film installed over the paint. It absorbs impacts from stones, road debris, scratches, and minor abrasions before they reach the paint.",
+      "whatItDoes": "PPF is a thick, transparent polyurethane film installed over the paint. It absorbs impacts from stones, road debris, scratches, and minor abrasions before they reach the paint.",
+      "realLifeExample": "A small stone hits your car at 100 km/h. Without PPF, it chips the paint. With PPF, the film absorbs the impact, leaving the original paint untouched.",
       "image": "/service_ppf.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>"
     },
     {
-      "title": "SUNFILMS",
-      "description": "High-performance window tinting for heat rejection and privacy.",
-      "image": "/service_sunfilm.png",
-      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"></circle><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"></line><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"></line><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"></line><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"></line><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"></line><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"></line><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"></line></svg>"
-    },
-    {
       "title": "PAINT CORRECTION",
-      "description": "Removing swirl marks and defects to reveal a mirror-like finish.",
+      "description": "Paint correction removes a microscopic layer of damaged clear coat using machine polishing. This eliminates swirl marks, oxidation, light scratches, haze, and restores gloss.",
+      "whatItDoes": "Paint correction removes a microscopic layer of damaged clear coat using machine polishing. This eliminates swirl marks, oxidation, light scratches, haze, and restores gloss.",
+      "realLifeExample": "If your car looks dull with circular scratches visible under sunlight, paint correction levels the damaged surface, making the paint smooth and mirror-like again.",
       "image": "/service_paint.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z\"></path><path d=\"m14 7 3 3\"></path><path d=\"M5 6v4\"></path><path d=\"M19 14v4\"></path><path d=\"M10 2v2\"></path><path d=\"M7 8H3\"></path><path d=\"M21 16h-4\"></path><path d=\"M11 3H9\"></path></svg>"
     },
     {
       "title": "INTERIOR DETAILING",
-      "description": "Deep cleaning and conditioning for a hygienic, fresh cabin.",
+      "description": "A deep cleaning process that removes dust, bacteria, stains, food residue, and odors from seats, carpets, dashboard, leather, plastics, vents, and every interior surface.",
+      "whatItDoes": "A deep cleaning process that removes dust, bacteria, stains, food residue, and odors from seats, carpets, dashboard, leather, plastics, vents, and every interior surface.",
+      "realLifeExample": "Coffee spills, children's footprints, pet hair, and years of dust are professionally cleaned, leaving the cabin looking and smelling like new.",
       "image": "/service_interior.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><circle cx=\"10\" cy=\"20.5\" r=\"1\"></circle><circle cx=\"18\" cy=\"20.5\" r=\"1\"></circle><path d=\"M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1\"></path></svg>"
     },
     {
-      "title": "ECO WASH",
-      "description": "Water-efficient professional hand wash with pH-neutral solutions.",
-      "image": "/ferrari_bg.png",
-      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z\"></path></svg>"
+      "title": "PLASTIC COATING",
+      "description": "Restores faded plastic trim by replenishing its rich black appearance while adding UV protection to prevent future fading and cracking.",
+      "whatItDoes": "Restores faded plastic trim by replenishing its rich black appearance while adding UV protection to prevent future fading and cracking.",
+      "realLifeExample": "A gray, faded bumper becomes deep black again and stays protected from harsh sunlight for months.",
+      "image": "/service_ceramic.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M12 2v20\"></path><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"></path></svg>"
     },
     {
-      "title": "TIRE & RIM CARE",
-      "description": "Degreasing and protective dressing for wheels and arches.",
+      "title": "TIRE DRESSING",
+      "description": "Conditions rubber tires, restoring their deep black finish while protecting against UV rays, drying, cracking, and premature aging.",
+      "whatItDoes": "Conditions rubber tires, restoring their deep black finish while protecting against UV rays, drying, cracking, and premature aging.",
+      "realLifeExample": "Instead of dull brown tires, your vehicle leaves the studio with a clean satin-black finish that lasts through multiple washes.",
       "image": "/ferrari_bg.png",
       "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><circle cx=\"12\" cy=\"12\" r=\"4\"></circle><line x1=\"21.17\" y1=\"8\" x2=\"12\" y2=\"8\"></line><line x1=\"3.95\" y1=\"6.06\" x2=\"8.54\" y2=\"14\"></line><line x1=\"10.88\" y1=\"21.94\" x2=\"15.46\" y2=\"14\"></line></svg>"
+    },
+    {
+      "title": "ENGINE BAY CLEANING",
+      "description": "Safely removes accumulated dust, grease, oil residue, and dirt from the engine compartment using specialized cleaners and low-pressure techniques without damaging electrical components.",
+      "whatItDoes": "Safely removes accumulated dust, grease, oil residue, and dirt from the engine compartment using specialized cleaners and low-pressure techniques without damaging electrical components.",
+      "realLifeExample": "Opening your hood after service reveals a clean engine instead of years of accumulated grime, making inspections and maintenance easier.",
+      "image": "/isolated_car.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"></path></svg>"
+    },
+    {
+      "title": "UNDERBODY CLEANING",
+      "description": "Removes mud, road tar, grease, salt, sand, and other contaminants from underneath the vehicle, reducing corrosion and maintaining structural components.",
+      "whatItDoes": "Removes mud, road tar, grease, salt, sand, and other contaminants from underneath the vehicle, reducing corrosion and maintaining structural components.",
+      "realLifeExample": "After driving through muddy roads or coastal areas, dirt sticks underneath the car. Underbody cleaning removes this buildup before it causes rust over time.",
+      "image": "/isolated_car.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>"
+    },
+    {
+      "title": "GLASS COATING",
+      "description": "Creates an invisible hydrophobic layer on the windshield and windows that repels rain, dirt, insects, and mineral deposits while improving visibility.",
+      "whatItDoes": "Creates an invisible hydrophobic layer on the windshield and windows that repels rain, dirt, insects, and mineral deposits while improving visibility.",
+      "realLifeExample": "At highway speeds during heavy rain, water beads up and blows off the windshield, allowing you to see more clearly with less reliance on the wipers.",
+      "image": "/service_sunfilm.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>"
+    },
+    {
+      "title": "CAR WRAPPING",
+      "description": "Applies a high-quality vinyl film over the original paint to change the vehicle's appearance while protecting the factory finish underneath.",
+      "whatItDoes": "Applies a high-quality vinyl film over the original paint to change the vehicle's appearance while protecting the factory finish underneath.",
+      "realLifeExample": "Want a matte black car without repainting? A wrap completely changes the look, and years later it can be removed to reveal the original paint.",
+      "image": "/ferrari_bg.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"></rect><path d=\"M12 12h.01\"></path><path d=\"M17 12h.01\"></path><path d=\"M7 12h.01\"></path></svg>"
+    },
+    {
+      "title": "SUN FILM (WINDOW TINT)",
+      "description": "High-performance window films block UV rays, reduce infrared heat, minimize glare, increase privacy, and help protect the interior from fading.",
+      "whatItDoes": "High-performance window films block UV rays, reduce infrared heat, minimize glare, increase privacy, and help protect the interior from fading.",
+      "realLifeExample": "When your car is parked in direct sunlight, quality sun film helps keep the cabin significantly cooler and protects the dashboard and leather seats from sun damage.",
+      "image": "/service_sunfilm.png",
+      "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"></circle><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"></line><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"></line><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"></line><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"></line><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"></line><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"></line><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"></line></svg>"
     }
   ],
   "formFields": [

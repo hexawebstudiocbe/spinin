@@ -50,7 +50,20 @@ export const ServiceModal = ({ service, onClose }) => {
             />
             <div className={styles.serviceInfo}>
               <h2 className={styles.title}>{service.title}</h2>
-              <p className={styles.description}>{service.description}</p>
+              
+              <div className={styles.sectionBlock}>
+                <h4 className={styles.sectionHeader}>WHAT IT DOES</h4>
+                <p className={styles.description}>
+                  {service.whatItDoes || service.description}
+                </p>
+              </div>
+
+              {service.realLifeExample && (
+                <div className={styles.exampleBox}>
+                  <h4 className={styles.exampleHeader}>REAL-LIFE EXAMPLE</h4>
+                  <p className={styles.exampleText}>{service.realLifeExample}</p>
+                </div>
+              )}
             </div>
           </div>
 

@@ -19,9 +19,7 @@ export const HeroSection = () => {
         <div className={styles.content}>
 
           <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`}>
-            Precision Protection<br />
-            Drive Clean,<br />
-            Drive Proud!
+            <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud!
           </h1>
 
           <div className={`${styles.descriptionBlock} animate-typewriter stagger-2 ${isVisible ? 'is-visible' : ''}`}>
