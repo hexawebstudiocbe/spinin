@@ -45,10 +45,6 @@ export const ServiceModal = ({ service, onClose }) => {
         <div className={styles.content}>
           {/* Left Side: Service Details */}
           <div className={styles.leftPanel}>
-            <div
-              className={styles.imageBackground}
-              style={{ backgroundImage: `url('${service.image}')` }}
-            />
             <div className={styles.serviceInfo}>
               <h2 className={styles.title}>{service.title}</h2>
 

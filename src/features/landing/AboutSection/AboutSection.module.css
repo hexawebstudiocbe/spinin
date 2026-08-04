@@ -1,58 +1,81 @@
 .section {
   background-color: var(--color-surface-light);
   border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
 }
 
 .content {
-  max-width: 800px;
-  text-align: center;
+  text-align: left;
 }
-
-/* Override the SectionTitle align just for this via composition if needed, but we used a wrapper */
 
 .text {
   color: var(--color-text-secondary);
   font-size: 1.125rem;
   line-height: 1.8;
-  margin-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
 }
 
-.stats {
+.imageWrapper {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-2xl);
-}
-
-.statItem {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
-.statNumber {
-  color: var(--color-red);
-  font-size: 3rem;
-  font-weight: 900;
-  font-style: italic;
-  line-height: 1;
-  margin-bottom: var(--spacing-xs);
+.imageBox {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(229, 46, 45, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(229, 46, 45, 0.15);
+  background: radial-gradient(circle at center, rgba(229, 46, 45, 0.15) 0%, #111111 70%);
 }
 
-.statLabel {
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.carImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
-    gap: var(--spacing-lg);
+.imageBox:hover .carImage {
+  transform: scale(1.05);
+}
+
+.imageGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(229, 46, 45, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .imageBox {
+    max-width: 100%;
   }
 }

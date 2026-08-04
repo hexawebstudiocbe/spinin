@@ -7,27 +7,30 @@ export const AboutSection = () => {
 
   return (
     <section id="about" className={`section-padding ${styles.section}`} ref={elementRef}>
-      <div className={`container ${styles.container}`}>
+      <div className={`container ${styles.grid}`}>
         <div className={`${styles.content} animate-fade-in-up ${isVisible ? 'is-visible' : ''}`}>
           <SectionTitle 
-            subtitle="WHO WE ARE" 
+            subtitle="About us" 
             title={<span>Driven by <span className="text-red">Passion.</span></span>}
+            align="left"
           />
           <p className={styles.text}>
-            At Spin In, we believe your vehicle is more than just transportation; it's a statement. 
+            At Spin In, we believe your vehicle is more than just transportation; it&apos;s a statement. 
             Our team of certified detailers brings years of expertise, utilizing only the finest 
             chemicals and cutting-edge techniques to ensure your investment is protected and looks 
             flawless for years to come.
           </p>
-          <div className={styles.stats}>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>10+</span>
-              <span className={styles.statLabel}>Years Experience</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>5k+</span>
-              <span className={styles.statLabel}>Cars Protected</span>
-            </div>
+        </div>
+
+        <div className={`${styles.imageWrapper} animate-fade-in-up stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+          <div className={styles.imageBox}>
+            <img 
+              src="/ferrari_bg.png" 
+              alt="Spin In Detailing Studio Passion" 
+              className={styles.carImage} 
+              loading="lazy"
+            />
+            <div className={styles.imageGlow} />
           </div>
         </div>
       </div>

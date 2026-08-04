@@ -34,9 +34,8 @@ export const ServicesSection = () => {
               className={`animate-fade-in-up stagger-${(index % 4) + 1} ${isVisible ? 'is-visible' : ''}`}
             >
               <Card 
-                icon={<div dangerouslySetInnerHTML={{ __html: service.icon }} />}
+                image={service.image}
                 title={service.title}
-                description={service.description}
                 linkText="View"
                 onClick={() => setSelectedService(service)}
               />

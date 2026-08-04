@@ -57,30 +57,19 @@
 
 .leftPanel {
   flex: 1;
-  position: relative;
-  background-color: #111;
+  background-color: var(--color-surface-light);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 400px;
-}
-
-.imageBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .serviceInfo {
   position: relative;
   z-index: 10;
-  padding: var(--spacing-xl);
-  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  padding: 0;
+  background: none;
 }
 
 .title {
@@ -290,14 +279,13 @@
   .leftPanel {
     min-height: auto;
     flex: 0 0 auto;
-  }
-
-  .imageBackground {
-    background-position: center 30%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.25rem 1.25rem 1rem;
   }
 
   .serviceInfo {
-    padding: 1.25rem 1.25rem 1rem;
+    padding: 0;
   }
 
   .title {
