@@ -18,7 +18,7 @@ export const ServiceModal = ({ service, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const whatsappNumber = '910000000000'; // Replace with actual number
+    const whatsappNumber = '919994534744'; // Replace with actual number
 
     const message =
       `Hi, I would like to book a service.%0a%0a` +
