@@ -52,10 +52,27 @@ export const ContactSection = () => {
         </div>
         
         <div className={`${styles.mapContainer} animate-fade-in-up stagger-2 ${isVisible ? 'is-visible' : ''}`}>
-          <div className={styles.mapImage} style={{ backgroundImage: `url('/map_bg.png')` }}>
-            <Button className={styles.mapBtn}>
-              Open in Maps
-            </Button>
+          <iframe
+            src="https://maps.google.com/maps?q=14%2C+Anna+Valankam+Nagar%2C+Ganapathy+Managar%2C+Coimbatore+-+641+006&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Spin In Studio Location Map"
+            className={styles.mapFrame}
+          />
+          <div className={styles.mapOverlayBtn}>
+            <a
+              href="https://maps.google.com/?q=14,+Anna+Valankam+Nagar,+Ganapathy+Managar,+Coimbatore+-+641+006"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={styles.mapBtn}>
+                Open in Maps
+              </Button>
+            </a>
           </div>
         </div>
         
