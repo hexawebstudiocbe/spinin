@@ -1,151 +1,34 @@
-.section {
-  background-color: var(--color-surface);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: var(--spacing-2xl);
-  align-items: start;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-}
-
-.contactDetails {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  margin-top: var(--spacing-md);
-}
-
-.detailItem {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-md);
-}
-
-.iconBox {
-  background-color: var(--color-surface-light);
-  color: var(--color-red);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid var(--color-border);
-}
-
-.detailTitle {
-  color: var(--color-white);
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  margin-bottom: var(--spacing-xs);
-  text-transform: uppercase;
-}
-
-.detailText {
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.phoneText {
-  color: var(--color-red);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.socials {
-  display: flex;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xl);
-}
-
-.socialBtn {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-border);
-  color: var(--color-text-secondary);
-  transition: all var(--transition-fast);
-  border-radius: 4px;
-}
-
-.socialBtn:hover {
-  border-color: var(--color-red);
-  color: var(--color-red);
-}
-
-/* Map Section */
-.mapWrapper {
-  margin-top: var(--spacing-md);
-  width: 100%;
-}
-
-.mapContainer {
-  height: 300px;
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.mapFrame {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: block;
-  border: none;
-  filter: contrast(98%);
-}
-
-.mapOverlayBtn {
-  position: absolute;
-  bottom: var(--spacing-sm);
-  right: var(--spacing-sm);
-  z-index: 10;
-}
-
-.mapBtn {
-  background-color: var(--color-red);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-  transition: all var(--transition-fast);
-  padding: 8px 16px;
-  font-size: 0.8rem;
-}
-
-.mapBtn:hover {
-  background-color: var(--color-red-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(229, 46, 45, 0.5);
-}
-
-/* Booking Card (Right Side) */
-.bookingContainer {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: var(--spacing-md);
+  animation: fadeIn 0.3s ease;
 }
 
-.bookingCard {
+.modal {
   background: var(--color-surface-light);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  padding: var(--spacing-xl);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
-  overflow: hidden;
+  padding: var(--spacing-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(229, 46, 45, 0.08);
+  animation: slideUp 0.3s ease;
 }
 
-.bookingCard::before {
+.modal::before {
   content: '';
   position: absolute;
   top: 0;
@@ -153,10 +36,36 @@
   width: 100%;
   height: 4px;
   background: linear-gradient(90deg, var(--color-red), var(--color-red-hover));
+  border-radius: 20px 20px 0 0;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.4rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+  border-color: var(--color-red);
 }
 
 .formTitle {
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   color: var(--color-white);
   margin-bottom: var(--spacing-xs);
   font-weight: 800;
@@ -165,7 +74,7 @@
 
 .formSubtitle {
   color: var(--color-text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin-bottom: var(--spacing-lg);
   line-height: 1.5;
 }
@@ -173,7 +82,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
 .formGroup {
@@ -190,14 +99,14 @@
 }
 
 .formGroup input {
-  padding: 14px 16px;
+  padding: 12px 14px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   color: var(--color-white);
   font-family: inherit;
   font-size: 1rem;
-  transition: all var(--transition-fast);
+  transition: all 0.2s;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
   color-scheme: dark;
@@ -219,7 +128,7 @@
   box-shadow: 0 0 0 3px rgba(229, 46, 45, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom Multi-Select Dropdown Styles */
+/* Multi-Select */
 .multiSelectContainer {
   position: relative;
   width: 100%;
@@ -229,14 +138,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 16px;
+  padding: 12px 14px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   color: var(--color-white);
   font-family: inherit;
   font-size: 1rem;
-  transition: all var(--transition-fast);
+  transition: all 0.2s;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
   cursor: pointer;
@@ -264,7 +173,7 @@
 }
 
 .selectArrow {
-  transition: transform var(--transition-fast);
+  transition: transform 0.2s;
   flex-shrink: 0;
 }
 
@@ -277,18 +186,17 @@
   top: calc(100% + 6px);
   left: 0;
   width: 100%;
-  max-height: 240px;
+  max-height: 200px;
   overflow-y: auto;
-  background: var(--color-surface-light);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   z-index: 50;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  /* Custom scrollbar */
   scrollbar-width: thin;
   scrollbar-color: var(--color-red) var(--color-surface);
 }
@@ -311,10 +219,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition: background 0.2s;
 }
 
 .checkboxLabel:hover {
@@ -342,12 +250,12 @@
   line-height: 1.3;
 }
 
-/* Selected Services Tags */
+/* Tags */
 .tagsContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .tag {
@@ -357,11 +265,11 @@
   background: rgba(229, 46, 45, 0.12);
   border: 1px solid rgba(229, 46, 45, 0.3);
   color: var(--color-white);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 50px;
-  transition: all var(--transition-fast);
+  transition: all 0.2s;
 }
 
 .tag:hover {
@@ -371,13 +279,13 @@
 
 .tagCloseBtn {
   color: var(--color-red);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: color var(--transition-fast);
+  transition: color 0.2s;
   padding: 0;
   border: none;
   background: none;
@@ -387,11 +295,12 @@
   color: var(--color-white);
 }
 
+/* Submit */
 .submitBtn {
   margin-top: 0.5rem;
   width: 100%;
-  padding: 1rem 1.5rem;
-  min-height: 50px;
+  padding: 0.9rem 1.5rem;
+  min-height: 48px;
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 700;
@@ -402,7 +311,7 @@
   gap: 0.6rem;
   background: linear-gradient(135deg, var(--color-red), var(--color-red-hover));
   box-shadow: 0 8px 20px rgba(229, 46, 45, 0.3);
-  transition: all var(--transition-fast);
+  transition: all 0.2s;
 }
 
 .submitBtn:hover {
@@ -413,24 +322,45 @@
 
 .whatsappIcon {
   flex-shrink: 0;
-  transition: transform var(--transition-fast);
+  transition: transform 0.2s;
 }
 
 .submitBtn:hover .whatsappIcon {
   transform: scale(1.15) rotate(5deg);
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 0.75rem;
   }
-  
-  .bookingCard {
+
+  .modal {
+    max-height: 92vh;
     padding: var(--spacing-lg);
+    border-radius: 20px;
   }
-  
-  .mapContainer {
-    height: 250px;
+
+  .formTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay {
+    padding: 0.5rem;
+  }
+
+  .modal {
+    padding: var(--spacing-md);
   }
 }

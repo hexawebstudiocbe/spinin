@@ -45,6 +45,7 @@
   width: auto;
   object-fit: contain;
   border-radius: 4px; /* Optional, if the logo needs rounded corners */
+  mix-blend-mode: screen;
 }
 
 .nav {
@@ -65,10 +66,17 @@
   color: var(--color-red);
 }
 
+.cta {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
 .ctaBtn {
-  background-color: var(--color-red);
+  background-color: transparent;
   color: var(--color-white);
-  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.5rem 1.25rem;
   border-radius: 30px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -76,8 +84,26 @@
 }
 
 .ctaBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.bookBtn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.bookBtn:hover {
   background-color: var(--color-red-hover);
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 46, 45, 0.3);
 }
 
 /* Hamburger Menu Button */
@@ -229,10 +255,12 @@
 .mobileCtaWrapper {
   padding-top: 0.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: var(--spacing-sm);
 }
 
 .mobileCtaBtn {
-  width: 100%;
+  flex: 1;
   background: linear-gradient(135deg, var(--color-red), var(--color-red-hover));
   color: var(--color-white);
   padding: 0.95rem 1.5rem;
@@ -255,6 +283,29 @@
   background: linear-gradient(135deg, var(--color-red-hover), var(--color-red));
 }
 
+.mobileCtaBtnSecondary {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  padding: 0.95rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.mobileCtaBtnSecondary:hover,
+.mobileCtaBtnSecondary:active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Responsive Media Queries */
 @media (max-width: 992px) {
   .nav {
@@ -265,7 +316,8 @@
     font-size: 0.8rem;
   }
 
-  .ctaBtn {
+  .ctaBtn,
+  .bookBtn {
     padding: 0.5rem 1rem;
   }
 }

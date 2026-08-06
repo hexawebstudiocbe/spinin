@@ -18,6 +18,11 @@ export const HeroSection = () => {
         {/* Left Side: Text Content */}
         <div className={styles.content}>
 
+          <div className={`${styles.pickupBadge} animate-fade-in ${isVisible ? 'is-visible' : ''}`}>
+            <span className={styles.badgeDot} />
+            <span>DOORSTEP PICKUP & DROP SERVICE</span>
+          </div>
+
           <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`}>
             <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud!
           </h1>
@@ -26,8 +31,8 @@ export const HeroSection = () => {
             <span className={styles.highlightText}>Clean | Protect | Perfect </span><br />
             <span className={styles.descriptionText}>
               Experience the ultimate standard in premium automotive care.<br />
-              Professional detailing and long-term protection systems in the<br />
-              heart of Coimbatore.
+              Effortless luxury with our signature doorstep pickup & drop service<br />
+              in the heart of Coimbatore.
             </span>
           </div>
 

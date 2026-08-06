@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import spinLogo from '../../../assets/SPIN IN Logo.jpg.jpeg';
+import { BookSlotModal } from '../../ui/BookSlotModal/BookSlotModal';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showBookSlot, setShowBookSlot] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,6 +91,9 @@ export const Header = () => {
           <div className={styles.cta}>
             <button onClick={() => scrollToSection('contact')} className={styles.ctaBtn}>
               Contact Us
+            </button>
+            <button onClick={() => setShowBookSlot(true)} className={styles.bookBtn}>
+              Book Slot
             </button>
           </div>
 
@@ -178,13 +183,18 @@ export const Header = () => {
             </nav>
 
             <div className={styles.mobileCtaWrapper}>
-              <button onClick={() => scrollToSection('contact')} className={styles.mobileCtaBtn}>
+              <button onClick={() => scrollToSection('contact')} className={styles.mobileCtaBtnSecondary}>
                 Contact Us
+              </button>
+              <button onClick={() => { setIsMobileMenuOpen(false); setShowBookSlot(true); }} className={styles.mobileCtaBtn}>
+                Book Slot
               </button>
             </div>
           </div>
         )}
       </header>
+
+      <BookSlotModal isOpen={showBookSlot} onClose={() => setShowBookSlot(false)} />
     </>
   );
 };

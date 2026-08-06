@@ -13,15 +13,19 @@
 }
 
 .logo {
-  font-size: 2.5rem;
-  font-weight: 800;
-  font-style: italic;
-  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   margin-bottom: var(--spacing-md);
 }
 
-.logoTextWhite { color: var(--color-white); }
-.logoTextRed { color: var(--color-red); }
+.logoImage {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  mix-blend-mode: screen;
+}
 
 .description {
   color: var(--color-text-secondary);
