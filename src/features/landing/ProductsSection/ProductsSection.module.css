@@ -1,0 +1,122 @@
+.section {
+  background: linear-gradient(135deg, #E52E2D 0%, #B51817 100%);
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  padding: 5px 0;
+}
+
+.logoTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* Scroll right continuously */
+  animation: scrollRight 30s linear infinite;
+  gap: 40px;
+}
+
+.logoTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logoCard {
+  background-color: transparent;
+  padding: 0 10px;
+  min-width: 180px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.logoCard:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.logoCard:hover .logoImage {
+  transform: scale(1.03);
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .section {
+    padding: 20px 0;
+  }
+
+  .logoCard {
+    min-width: 150px;
+    height: 75px;
+  }
+  
+  .logoImage {
+    max-height: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoCard {
+    min-width: 120px;
+    height: 60px;
+  }
+
+  .logoImage {
+    max-height: 50px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}

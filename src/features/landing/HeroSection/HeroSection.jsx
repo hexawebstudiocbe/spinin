@@ -17,12 +17,6 @@ export const HeroSection = () => {
 
         {/* Left Side: Text Content */}
         <div className={styles.content}>
-
-          <div className={`${styles.pickupBadge} animate-fade-in ${isVisible ? 'is-visible' : ''}`}>
-            <span className={styles.badgeDot} />
-            <span>DOORSTEP PICKUP & DROP SERVICE</span>
-          </div>
-
           <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`}>
             <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud!
           </h1>
@@ -36,7 +30,24 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          <div className={`${styles.actions} animate-premium stagger-3 ${isVisible ? 'is-visible' : ''}`}>
+          <div className={`${styles.pickupCard} animate-premium stagger-3 ${isVisible ? 'is-visible' : ''}`}>
+            <div className={styles.pickupCardIcon}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <div className={styles.pickupCardContent}>
+              <h4 className={styles.pickupCardTitle}>Doorstep Pickup & Drop</h4>
+              <p className={styles.pickupCardText}>
+                We pick up, detail to perfection, and return your vehicle safely. Effortless luxury.
+              </p>
+            </div>
+          </div>
+
+          <div className={`${styles.actions} animate-premium stagger-4 ${isVisible ? 'is-visible' : ''}`}>
             <Button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               View Services
             </Button>

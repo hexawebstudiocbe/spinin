@@ -1,0 +1,197 @@
+.section {
+  background-color: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.introText {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.benefitItem {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.benefitIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(229, 46, 45, 0.08);
+  border: 1px solid rgba(229, 46, 45, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-red);
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(229, 46, 45, 0.1);
+}
+
+.benefitTitle {
+  font-size: 1.05rem;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.benefitDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.actionBtn {
+  align-self: flex-start;
+}
+
+/* Timeline Graphic styling */
+.graphicWrapper {
+  position: relative;
+  padding: var(--spacing-md);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.timelineLine {
+  position: absolute;
+  left: 27px;
+  top: var(--spacing-md);
+  bottom: var(--spacing-md);
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-red), rgba(229, 46, 45, 0.2) 80%, transparent 100%);
+  z-index: 1;
+}
+
+.stepCard {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-md);
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 16px;
+  z-index: 2;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stepCard:hover {
+  transform: translateX(8px);
+  border-color: rgba(229, 46, 45, 0.3);
+  box-shadow: 0 10px 30px rgba(229, 46, 45, 0.08), 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stepBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-surface-light);
+  border: 2px solid var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--color-red);
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(229, 46, 45, 0.2);
+  flex-shrink: 0;
+  z-index: 3;
+  transition: all var(--transition-normal);
+}
+
+.stepCard:hover .stepBadge {
+  background: var(--color-red);
+  color: var(--color-white);
+  box-shadow: 0 0 20px rgba(229, 46, 45, 0.6);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-size: 1.15rem;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.glowOverlay {
+  position: absolute;
+  inset: -10%;
+  background: radial-gradient(circle at 60% 50%, rgba(229, 46, 45, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .actionBtn {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .stepCard:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .stepCard {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .stepBadge {
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .timelineLine {
+    left: 21px;
+  }
+}

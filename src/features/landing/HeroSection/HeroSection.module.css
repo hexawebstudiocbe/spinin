@@ -88,6 +88,61 @@
   gap: var(--spacing-md);
 }
 
+.pickupCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: rgba(229, 46, 45, 0.05);
+  border: 1px solid rgba(229, 46, 45, 0.2);
+  border-radius: 12px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  max-width: 540px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.pickupCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(229, 46, 45, 0.45);
+  background: rgba(229, 46, 45, 0.08);
+  box-shadow: 0 12px 40px rgba(229, 46, 45, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.pickupCardIcon {
+  color: var(--color-red);
+  background: rgba(229, 46, 45, 0.1);
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(229, 46, 45, 0.2);
+}
+
+.pickupCardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.pickupCardTitle {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.pickupCardText {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
 .imageWrapper {
   position: absolute;
   top: 0;
@@ -176,6 +231,12 @@
     flex-direction: column;
     align-items: center;
     padding-left: 0;
+  }
+
+  .pickupCard {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
   .imageWrapper {

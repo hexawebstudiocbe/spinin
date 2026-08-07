@@ -21,7 +21,6 @@
   max-width: 560px;
   max-height: 90vh;
   overflow: hidden;
-  overflow-y: auto;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(229, 46, 45, 0.08);
   animation: slideUp 0.3s ease;
@@ -172,6 +171,7 @@
   .modal {
     max-height: 92vh;
     border-radius: 20px;
+    overflow-y: auto;
   }
 
   .imageSection {
