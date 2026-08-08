@@ -107,9 +107,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className={styles.detailTitle}>SPIN IN STUDIO</h4>
                 <p className={styles.detailText}>
-                  14, Anna Valankam Nagar, Ganapathy Managar,<br />
-                  Coimbatore - 641 006<br />
-                  <span className={styles.coordinates}>11°03'01.3"N 77°00'05.4"E</span>
+                  6, annai velankkaani nagar ganapathy maanagar , coimbatore
                 </p>
               </div>
             </div>

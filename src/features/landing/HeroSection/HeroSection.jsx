@@ -6,9 +6,9 @@ import styles from './HeroSection.module.css';
 
 export const HeroSection = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
-  
+
   const carouselImages = [
-    '/car1.jpg',
+    '/car5.webp',
     '/hd_carousel_1.png',
     '/hd_carousel_3.png',
     '/car4.webp'
@@ -28,11 +28,11 @@ export const HeroSection = () => {
       {/* Right Side: Car Image Carousel */}
       <div className={`${styles.imageWrapper} animate-slide-in-right ${isVisible ? 'is-visible' : ''}`}>
         {carouselImages.map((src, index) => (
-          <img 
-            key={src} 
-            src={src} 
-            alt="Premium Sports Car" 
-            className={`${styles.carImage} ${index === currentImageIndex ? styles.activeImage : styles.inactiveImage} ${src !== '/car1.jpg' ? styles.alignBottom : ''}`} 
+          <img
+            key={src}
+            src={src}
+            alt="Premium Sports Car"
+            className={`${styles.carImage} ${index === currentImageIndex ? styles.activeImage : styles.inactiveImage} ${src !== '/car5.webp' ? styles.alignBottom : ''}`}
           />
         ))}
       </div>
