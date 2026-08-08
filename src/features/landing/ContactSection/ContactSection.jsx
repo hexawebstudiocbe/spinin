@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { Button } from '../../../components/ui/Button/Button';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
 import styles from './ContactSection.module.css';
 import appData from '../../../data/appData.json';
 
@@ -61,7 +62,7 @@ export const ContactSection = () => {
       return;
     }
 
-    const whatsappNumber = '919994534744'; // Keeping the user-selected WhatsApp number
+    const whatsappNumber = '919677767123'; // Keeping the user-selected WhatsApp number
     
     const message =
       `Hi, I would like to book a slot for detailing.%0a%0a` +
@@ -119,7 +120,7 @@ export const ContactSection = () => {
               </div>
               <div>
                 <h4 className={styles.detailTitle}>CALL US</h4>
-                <p className={styles.phoneText}>+91 97877 12345</p>
+                <p className={styles.phoneText}>+91 96777 67123</p>
               </div>
             </div>
           </div>
@@ -318,6 +319,7 @@ export const ContactSection = () => {
         </div>
         
       </div>
+      <ScrollDown targetId="footer" />
     </section>
   );
 };

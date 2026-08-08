@@ -24,6 +24,96 @@
   margin-bottom: 0;
 }
 
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  padding-left: 10px;
+}
+
+.timelineHeader {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  margin-top: 0;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 31px;
+  top: 45px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-red), rgba(229, 46, 45, 0.2) 80%, transparent 100%);
+  z-index: 1;
+}
+
+.stepCard {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(229, 46, 45, 0.1);
+  padding: 10px 14px;
+  border-radius: 12px;
+  z-index: 2;
+  transition: all var(--transition-normal);
+  align-items: center;
+  max-width: 450px;
+}
+
+.stepCard:hover {
+  transform: translateX(5px);
+  border-color: rgba(229, 46, 45, 0.3);
+  background: rgba(229, 46, 45, 0.05);
+}
+
+.stepBadge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-surface-light);
+  border: 2px solid var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-red);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  z-index: 3;
+  transition: all var(--transition-normal);
+}
+
+.stepCard:hover .stepBadge {
+  background: var(--color-red);
+  color: var(--color-white);
+  box-shadow: 0 0 10px rgba(229, 46, 45, 0.4);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+
+.stepDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
 .imageWrapper {
   display: flex;
   justify-content: center;

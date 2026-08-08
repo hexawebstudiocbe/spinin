@@ -14,6 +14,7 @@ const brands = [
   {
     name: 'Koch Chemie',
     logoUrl: '/kochchemie.png',
+    isLarge: true,
   },
   {
     name: 'Menzerna',
@@ -48,12 +49,12 @@ export const ProductsSection = () => {
         <div className={styles.logoTrack}>
           {brands.map((brand, index) => (
             <div key={`set1-${index}`} className={styles.logoCard} title={brand.name}>
-              <img src={brand.logoUrl} alt={`${brand.name} logo`} className={styles.logoImage} />
+              <img src={brand.logoUrl} alt={`${brand.name} logo`} className={`${styles.logoImage} ${brand.isLarge ? styles.largeLogo : ''}`} />
             </div>
           ))}
           {brands.map((brand, index) => (
             <div key={`set2-${index}`} className={styles.logoCard} title={brand.name}>
-              <img src={brand.logoUrl} alt={`${brand.name} logo`} className={styles.logoImage} />
+              <img src={brand.logoUrl} alt={`${brand.name} logo`} className={`${styles.logoImage} ${brand.isLarge ? styles.largeLogo : ''}`} />
             </div>
           ))}
         </div>

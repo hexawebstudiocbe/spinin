@@ -4,7 +4,7 @@ import spinLogo from '../../../assets/SPIN IN Logo.jpg.jpeg';
 
 export const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={`container ${styles.footerContent}`}>
         <div className={styles.brandSection}>
           <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

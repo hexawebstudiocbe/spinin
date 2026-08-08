@@ -89,6 +89,14 @@
   transform: scale(1.03);
 }
 
+.largeLogo {
+  transform: scale(1.8);
+}
+
+.logoCard:hover .largeLogo {
+  transform: scale(1.85);
+}
+
 /* Responsive Overrides */
 @media (max-width: 900px) {
   .section {

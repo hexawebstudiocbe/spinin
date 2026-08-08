@@ -1,5 +1,6 @@
 .section {
   background-color: var(--color-black);
+  position: relative;
 }
 
 .headerWrapper {

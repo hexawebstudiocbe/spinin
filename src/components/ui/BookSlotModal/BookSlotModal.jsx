@@ -77,7 +77,7 @@ export const BookSlotModal = ({ isOpen, onClose }) => {
       return;
     }
 
-    const whatsappNumber = '919994534744';
+    const whatsappNumber = '919677767123';
     
     const message =
       `Hi, I would like to book a slot for detailing.%0a%0a` +

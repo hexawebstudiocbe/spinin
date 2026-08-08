@@ -1,5 +1,6 @@
 import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
 import styles from './OurStorySection.module.css';
 
 export const OurStorySection = () => {
@@ -81,6 +82,7 @@ export const OurStorySection = () => {
         </div>
 
       </div>
+      <ScrollDown targetId="services" />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 .section {
   background-color: var(--color-surface);
+  position: relative;
 }
 
 .grid {

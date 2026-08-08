@@ -3,6 +3,7 @@ import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { Card } from '../../../components/ui/Card/Card';
 import { ServiceModal } from '../../../components/ui/ServiceModal/ServiceModal';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
+import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
 import styles from './ServicesSection.module.css';
 
 import appData from '../../../data/appData.json';
@@ -42,6 +43,7 @@ export const ServicesSection = () => {
             </div>
           ))}
         </div>
+        <ScrollDown targetId="about" />
       </section>
       
       {selectedService && (

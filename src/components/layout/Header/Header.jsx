@@ -77,14 +77,17 @@ export const Header = () => {
             <button onClick={() => scrollToSection('story')} className={styles.navLink}>
               Our Story
             </button>
-            <button onClick={() => scrollToSection('about')} className={styles.navLink}>
-              About Us
-            </button>
+            {/* <button onClick={() => scrollToSection('products')} className={styles.navLink}>
+              Brands We Use
+            </button> */}
             <button onClick={() => scrollToSection('services')} className={styles.navLink}>
               Services
             </button>
+            <button onClick={() => scrollToSection('about')} className={styles.navLink}>
+              About Us
+            </button>
             <button onClick={() => scrollToSection('contact')} className={styles.navLink}>
-              Location
+              Contact
             </button>
           </nav>
 
@@ -129,8 +132,8 @@ export const Header = () => {
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </button>
-              <button onClick={() => scrollToSection('about')} className={styles.mobileNavLink}>
-                <span>About Us</span>
+              <button onClick={() => scrollToSection('products')} className={styles.mobileNavLink}>
+                <span>Brands We Use</span>
                 <svg
                   className={styles.mobileNavArrow}
                   width="18"
@@ -163,8 +166,25 @@ export const Header = () => {
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </button>
+              <button onClick={() => scrollToSection('about')} className={styles.mobileNavLink}>
+                <span>About Us</span>
+                <svg
+                  className={styles.mobileNavArrow}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
               <button onClick={() => scrollToSection('contact')} className={styles.mobileNavLink}>
-                <span>Location</span>
+                <span>Contact</span>
                 <svg
                   className={styles.mobileNavArrow}
                   width="18"
