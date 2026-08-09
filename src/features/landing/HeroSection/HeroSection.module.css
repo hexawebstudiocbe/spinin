@@ -214,9 +214,17 @@
 
 
 @media (max-width: 1024px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: 60px;
+  }
+
   .heroContainer {
     grid-template-columns: 1fr;
     text-align: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .content {
@@ -231,28 +239,73 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    max-width: 400px;
   }
 
   .imageWrapper {
-    width: 100%;
-    justify-content: center;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, transparent 100%);
-  }
-
-  .carImage {
-    max-width: 100%;
-    opacity: 0.4;
-    object-position: center;
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  .heroContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .descriptionBlock {
+    margin-bottom: 0.85rem;
+  }
+
+  .highlightText {
+    font-size: 1.15rem;
+  }
+
+  .descriptionText {
+    font-size: 0.85rem;
+  }
+
+  .pickupCard {
+    padding: 0.6rem 0.85rem;
+    gap: 0.7rem;
+    margin-bottom: 0.85rem;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .pickupCardIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pickupCardIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pickupCardTitle {
+    font-size: 0.8rem;
+  }
+
+  .pickupCardText {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 
   .actions {
     flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 0.6rem;
   }
 }
