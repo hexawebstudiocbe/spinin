@@ -22,8 +22,8 @@ export const ContactSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const servicesList = [
-    ...appData.services.map((s) => s.title),
-    "General Consultation / Custom Quote"
+    "General Consultation / Custom Quote",
+    ...appData.services.map((s) => s.title)
   ];
 
   // Close dropdown on click outside

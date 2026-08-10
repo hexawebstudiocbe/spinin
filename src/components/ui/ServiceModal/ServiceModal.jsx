@@ -2,15 +2,19 @@ import React from 'react';
 import { Button } from '../Button/Button';
 import styles from './ServiceModal.module.css';
 
-export const ServiceModal = ({ service, onClose }) => {
+export const ServiceModal = ({ service, onClose, onBookNow }) => {
   if (!service) return null;
 
   const handleBookNow = () => {
-    onClose();
-    // Scroll to the book-slot section
-    setTimeout(() => {
-      document.getElementById('book-slot')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    if (onBookNow) {
+      onBookNow();
+    } else {
+      onClose();
+      // Scroll to the book-slot section
+      setTimeout(() => {
+        document.getElementById('book-slot')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   return (

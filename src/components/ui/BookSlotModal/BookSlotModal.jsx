@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import styles from './BookSlotModal.module.css';
 import appData from '../../../data/appData.json';
 
-export const BookSlotModal = ({ isOpen, onClose }) => {
+export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
   const dropdownRef = useRef(null);
   
   const [formData, setFormData] = useState({
@@ -17,9 +17,9 @@ export const BookSlotModal = ({ isOpen, onClose }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const servicesList = [
+    "General Consultation / Custom Quote",
     ...appData.services.map((s) => s.title),
-    "DOORSTEP PICKUP & DROP SERVICE",
-    "General Consultation / Custom Quote"
+    "DOORSTEP PICKUP & DROP SERVICE"
   ];
 
   // Close dropdown on click outside
@@ -48,11 +48,17 @@ export const BookSlotModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      if (initialService) {
+        setSelectedServices([initialService]);
+      }
     } else {
       document.body.style.overflow = '';
+      if (initialService) {
+        setSelectedServices([]);
+      }
     }
     return () => { document.body.style.overflow = ''; };
-  }, [isOpen]);
+  }, [isOpen, initialService]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

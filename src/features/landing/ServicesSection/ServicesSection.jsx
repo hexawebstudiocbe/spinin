@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { Card } from '../../../components/ui/Card/Card';
 import { ServiceModal } from '../../../components/ui/ServiceModal/ServiceModal';
+import { BookSlotModal } from '../../../components/ui/BookSlotModal/BookSlotModal';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
 import styles from './ServicesSection.module.css';
@@ -13,6 +14,8 @@ const services = appData.services;
 export const ServicesSection = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
   const [selectedService, setSelectedService] = useState(null);
+  const [showBookSlot, setShowBookSlot] = useState(false);
+  const [initialServiceForBooking, setInitialServiceForBooking] = useState(null);
 
   return (
     <>
@@ -50,8 +53,22 @@ export const ServicesSection = () => {
         <ServiceModal 
           service={selectedService} 
           onClose={() => setSelectedService(null)} 
+          onBookNow={() => {
+            setInitialServiceForBooking(selectedService.title);
+            setShowBookSlot(true);
+            // Delay unmounting to allow a smooth transition
+            setTimeout(() => {
+              setSelectedService(null);
+            }, 300);
+          }}
         />
       )}
+
+      <BookSlotModal 
+        isOpen={showBookSlot} 
+        onClose={() => setShowBookSlot(false)} 
+        initialService={initialServiceForBooking}
+      />
     </>
   );
 };
