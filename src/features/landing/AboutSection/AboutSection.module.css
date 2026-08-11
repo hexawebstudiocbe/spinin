@@ -7,9 +7,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.3fr 1fr;
   gap: var(--spacing-2xl);
-  align-items: center;
+  align-items: stretch;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
 }
 
 .content {
@@ -24,13 +28,80 @@
   margin-bottom: 0;
 }
 
+.leadText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: left;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+  letter-spacing: -0.3px;
+}
+
+.paragraph {
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.highlightCard {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(17, 17, 17, 0.9) 100%);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-red);
+  border-radius: 6px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlightCardText {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.brandHighlight {
+  color: var(--color-red);
+  font-style: italic;
+}
+
+.boldTransition {
+  color: var(--color-white);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.finalQuoteBox {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--color-red);
+  background: rgba(229, 46, 45, 0.05);
+  border-radius: 4px;
+  text-align: left;
+}
+
+.finalQuoteText {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  line-height: 1.35;
+  margin: 0;
+}
+
 .timeline {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
-  padding-left: 10px;
+  margin-top: var(--spacing-xl);
 }
 
 .timelineHeader {
@@ -41,28 +112,26 @@
   margin-top: 0;
 }
 
-.timelineLine {
-  position: absolute;
-  left: 31px;
-  top: 45px;
-  bottom: 10px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--color-red), rgba(229, 46, 45, 0.2) 80%, transparent 100%);
-  z-index: 1;
+.stepsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  width: 100%;
 }
 
 .stepCard {
   position: relative;
   display: flex;
-  gap: var(--spacing-md);
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(229, 46, 45, 0.1);
-  padding: 10px 14px;
+  padding: 1rem;
   border-radius: 12px;
   z-index: 2;
   transition: all var(--transition-normal);
-  align-items: center;
-  max-width: 450px;
+  align-items: flex-start;
 }
 
 .stepCard:hover {
@@ -165,7 +234,7 @@
     text-align: left;
   }
 
-  .imageBox {
-    max-width: 100%;
+  .stepsContainer {
+    flex-direction: column;
   }
 }

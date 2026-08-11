@@ -18,9 +18,9 @@ export const Footer = () => {
         <div className={styles.navSection}>
           <h4 className={styles.heading}>Quick Links</h4>
           <ul className={styles.links}>
-            <li><button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Services</button></li>
             <li><button onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}>Our Story</button></li>
-            <li><button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>About</button></li>
+            <li><button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>Services</button></li>
+            <li><button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>About Us</button></li>
             <li><button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Contact</button></li>
           </ul>
         </div>
