@@ -86,12 +86,12 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
     const whatsappNumber = '919677767123';
     
     const message =
-      `Hi, I would like to book a slot for detailing.%0a%0a` +
-      `*Name:* ${formData.name}%0a` +
-      `*Phone:* ${formData.phone}%0a` +
-      `*Vehicle:* ${formData.vehicle}%0a` +
-      `*Services:* ${selectedServices.join(', ')}%0a` +
-      `*Doorstep Service:* ${formData.doorstepService}%0a` +
+      `Hi, I would like to book a slot for detailing.\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Vehicle:* ${formData.vehicle}\n` +
+      `*Services:* ${selectedServices.join(', ')}\n` +
+      `*Doorstep Service:* ${formData.doorstepService}\n` +
       `*Preferred Date:* ${formData.date || 'Not specified'}`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

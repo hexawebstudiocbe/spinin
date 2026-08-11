@@ -65,12 +65,12 @@ export const ContactSection = () => {
     const whatsappNumber = '919677767123'; // Keeping the user-selected WhatsApp number
     
     const message =
-      `Hi, I would like to book a slot for detailing.%0a%0a` +
-      `*Name:* ${formData.name}%0a` +
-      `*Phone:* ${formData.phone}%0a` +
-      `*Vehicle:* ${formData.vehicle}%0a` +
-      `*Services:* ${selectedServices.join(', ')}%0a` +
-      `*Doorstep Pickup & Drop:* ${formData.doorstepService}%0a` +
+      `Hi, I would like to book a slot for detailing.\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Vehicle:* ${formData.vehicle}\n` +
+      `*Services:* ${selectedServices.join(', ')}\n` +
+      `*Doorstep Pickup & Drop:* ${formData.doorstepService}\n` +
       `*Preferred Date:* ${formData.date || 'Not specified'}`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -107,7 +107,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className={styles.detailTitle}>SPIN IN STUDIO</h4>
                 <p className={styles.detailText}>
-                  6, annai velankkaani nagar ganapathy maanagar , coimbatore
+                  6, Annai Velankkaani nagar Ganapathy maanagar , Coimbatore
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className={styles.detailTitle}>CALL US</h4>
                 <p className={styles.phoneText}>+91 96777 67123</p>
-                <p className={styles.phoneText}>Sanjay: +91 99945 34744</p>
+                <p className={styles.phoneText}>+91 99945 34744</p>
               </div>
             </div>
           </div>
