@@ -19,7 +19,7 @@
   border: 1px solid var(--color-border);
   border-radius: 20px;
   width: 100%;
-  max-width: 480px;
+  max-width: 800px;
   max-height: 90vh;
   overflow: hidden;
   scrollbar-width: none; /* Firefox */
@@ -85,9 +85,9 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
 }
 
 .formGroup {
@@ -103,7 +103,8 @@
   letter-spacing: 0.5px;
 }
 
-.formGroup input {
+.formGroup input,
+.formGroup select {
   padding: 12px 14px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -117,20 +118,28 @@
   color-scheme: dark;
 }
 
-.formGroup input::placeholder {
+.formGroup input::placeholder,
+.formGroup select::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.formGroup input:hover {
+.formGroup input:hover,
+.formGroup select:hover {
   border-color: rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.07);
 }
 
-.formGroup input:focus {
+.formGroup input:focus,
+.formGroup select:focus {
   outline: none;
   border-color: var(--color-red);
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 0 3px rgba(229, 46, 45, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.formGroup select option {
+  background: var(--color-surface);
+  color: var(--color-white);
 }
 
 /* Multi-Select */
@@ -303,6 +312,7 @@
 /* Submit */
 .submitBtn {
   margin-top: 0.5rem;
+  grid-column: 1 / -1;
   width: 100%;
   padding: 0.9rem 1.5rem;
   min-height: 48px;
@@ -353,6 +363,12 @@
     max-height: 92vh;
     padding: var(--spacing-lg);
     border-radius: 20px;
+    overflow-y: auto;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .formTitle {

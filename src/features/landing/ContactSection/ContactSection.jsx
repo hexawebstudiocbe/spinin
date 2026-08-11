@@ -73,7 +73,7 @@ export const ContactSection = () => {
       `*Doorstep Pickup & Drop:* ${formData.doorstepService}%0a` +
       `*Preferred Date:* ${formData.date || 'Not specified'}`;
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     // Clear form after submission
@@ -250,7 +250,7 @@ export const ContactSection = () => {
                 {/* Selected Services Tags */}
                 {selectedServices.length > 0 && (
                   <div className={styles.tagsContainer}>
-                    {selectedServices.map((service, index) => (
+                    {selectedServices.slice(0, 2).map((service, index) => (
                       <span key={index} className={styles.tag}>
                         {service}
                         <button
@@ -263,6 +263,11 @@ export const ContactSection = () => {
                         </button>
                       </span>
                     ))}
+                    {selectedServices.length > 2 && (
+                      <span className={styles.tag} style={{ paddingRight: '8px' }}>
+                        +{selectedServices.length - 2} more
+                      </span>
+                    )}
                   </div>
                 )}
               </div>

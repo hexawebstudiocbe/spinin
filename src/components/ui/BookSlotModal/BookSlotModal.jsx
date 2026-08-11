@@ -11,6 +11,7 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
     phone: '',
     vehicle: '',
     date: '',
+    doorstepService: 'No',
   });
   
   const [selectedServices, setSelectedServices] = useState([]);
@@ -18,8 +19,7 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
 
   const servicesList = [
     "General Consultation / Custom Quote",
-    ...appData.services.map((s) => s.title),
-    "DOORSTEP PICKUP & DROP SERVICE"
+    ...appData.services.map((s) => s.title)
   ];
 
   // Close dropdown on click outside
@@ -91,12 +91,13 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
       `*Phone:* ${formData.phone}%0a` +
       `*Vehicle:* ${formData.vehicle}%0a` +
       `*Services:* ${selectedServices.join(', ')}%0a` +
+      `*Doorstep Service:* ${formData.doorstepService}%0a` +
       `*Preferred Date:* ${formData.date || 'Not specified'}`;
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
-    setFormData({ name: '', phone: '', vehicle: '', date: '' });
+    setFormData({ name: '', phone: '', vehicle: '', date: '', doorstepService: 'No' });
     setSelectedServices([]);
     setIsDropdownOpen(false);
     onClose();
@@ -204,7 +205,7 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
 
             {selectedServices.length > 0 && (
               <div className={styles.tagsContainer}>
-                {selectedServices.map((service, index) => (
+                {selectedServices.slice(0, 2).map((service, index) => (
                   <span key={index} className={styles.tag}>
                     {service}
                     <button
@@ -217,8 +218,26 @@ export const BookSlotModal = ({ isOpen, onClose, initialService }) => {
                     </button>
                   </span>
                 ))}
+                {selectedServices.length > 2 && (
+                  <span className={styles.tag} style={{ paddingRight: '8px' }}>
+                    +{selectedServices.length - 2} more
+                  </span>
+                )}
               </div>
             )}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="modal-doorstep">Need Doorstep Pickup & Drop Service?</label>
+            <select
+              id="modal-doorstep"
+              name="doorstepService"
+              value={formData.doorstepService}
+              onChange={handleChange}
+            >
+              <option value="No">No, I will drop off my vehicle</option>
+              <option value="Yes">Yes, I need pickup & drop service</option>
+            </select>
           </div>
 
           <div className={styles.formGroup}>
