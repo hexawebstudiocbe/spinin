@@ -119,6 +119,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className={styles.detailTitle}>CALL US</h4>
                 <p className={styles.phoneText}>+91 96777 67123</p>
+                <p className={styles.phoneText}>Sanjay: +91 99945 34744</p>
               </div>
             </div>
           </div>
