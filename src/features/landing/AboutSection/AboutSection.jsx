@@ -42,7 +42,7 @@ export const AboutSection = () => {
           </p>
 
           <p className={`${styles.paragraph} animate-fade-in-up stagger-4 ${isVisible ? 'is-visible' : ''}`}>
-            We are also deeply grateful for the learning and guidance we received from <span className="text-red">Team Cargo Car Glow</span>, Chennai. With over <span className="text-red">50 years of combined detailing experience</span>, their knowledge helped shape our foundation. It taught us discipline, precision, and the right way to approach detailing — values we carry into every car we work on.
+            We are also deeply grateful for the learning and guidance we received from <span className="text-red"> Team Car Glow</span>, Chennai. With over <span className="text-red"><br />20 years of combined detailing experience</span>, their knowledge helped shape our foundation. It taught us discipline, precision, and the right way to approach detailing — values we carry into every car we work on.
           </p>
 
           <p className={`${styles.paragraph} animate-fade-in-up stagger-5 ${isVisible ? 'is-visible' : ''}`}>
