@@ -31,7 +31,7 @@ export const HeroSection = () => {
           <img
             key={src}
             src={src}
-            alt="Premium Sports Car"
+            alt="Spinin Premium Sports Car Detailing"
             className={`${styles.carImage} ${index === currentImageIndex ? styles.activeImage : styles.inactiveImage} ${src !== '/car5.webp' ? styles.alignBottom : ''}`}
           />
         ))}
