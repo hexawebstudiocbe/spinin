@@ -74,27 +74,27 @@ export const Header = () => {
           </div>
 
           <nav className={styles.nav}>
-            <button onClick={() => scrollToSection('story')} className={styles.navLink}>
+            <a href="#story" onClick={(e) => { e.preventDefault(); scrollToSection('story'); }} className={styles.navLink}>
               Our Story
-            </button>
-            {/* <button onClick={() => scrollToSection('products')} className={styles.navLink}>
+            </a>
+            {/* <a href="#products" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }} className={styles.navLink}>
               Brands We Use
-            </button> */}
-            <button onClick={() => scrollToSection('services')} className={styles.navLink}>
+            </a> */}
+            <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className={styles.navLink}>
               Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className={styles.navLink}>
+            </a>
+            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className={styles.navLink}>
               About Us
-            </button>
-            <button onClick={() => scrollToSection('contact')} className={styles.navLink}>
+            </a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className={styles.navLink}>
               Contact
-            </button>
+            </a>
           </nav>
 
           <div className={styles.cta}>
-            <button onClick={() => scrollToSection('contact')} className={styles.ctaBtn}>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className={styles.ctaBtn}>
               Contact Us
-            </button>
+            </a>
             <button onClick={() => setShowBookSlot(true)} className={styles.bookBtn}>
               Book Slot
             </button>
@@ -115,7 +115,7 @@ export const Header = () => {
         {isMobileMenuOpen && (
           <div className={styles.mobileMenu}>
             <nav className={styles.mobileNav}>
-              <button onClick={() => scrollToSection('story')} className={styles.mobileNavLink}>
+              <a href="#story" onClick={(e) => { e.preventDefault(); scrollToSection('story'); }} className={styles.mobileNavLink}>
                 <span>Our Story</span>
                 <svg
                   className={styles.mobileNavArrow}
@@ -131,8 +131,8 @@ export const Header = () => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </button>
-              <button onClick={() => scrollToSection('products')} className={styles.mobileNavLink}>
+              </a>
+              <a href="#products" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }} className={styles.mobileNavLink}>
                 <span>Brands We Use</span>
                 <svg
                   className={styles.mobileNavArrow}
@@ -148,8 +148,8 @@ export const Header = () => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </button>
-              <button onClick={() => scrollToSection('services')} className={styles.mobileNavLink}>
+              </a>
+              <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className={styles.mobileNavLink}>
                 <span>Services</span>
                 <svg
                   className={styles.mobileNavArrow}
@@ -165,8 +165,8 @@ export const Header = () => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </button>
-              <button onClick={() => scrollToSection('about')} className={styles.mobileNavLink}>
+              </a>
+              <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className={styles.mobileNavLink}>
                 <span>About Us</span>
                 <svg
                   className={styles.mobileNavArrow}
@@ -182,8 +182,8 @@ export const Header = () => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </button>
-              <button onClick={() => scrollToSection('contact')} className={styles.mobileNavLink}>
+              </a>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className={styles.mobileNavLink}>
                 <span>Contact</span>
                 <svg
                   className={styles.mobileNavArrow}
@@ -199,13 +199,13 @@ export const Header = () => {
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </button>
+              </a>
             </nav>
 
             <div className={styles.mobileCtaWrapper}>
-              <button onClick={() => scrollToSection('contact')} className={styles.mobileCtaBtnSecondary}>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className={styles.mobileCtaBtnSecondary}>
                 Contact Us
-              </button>
+              </a>
               <button onClick={() => { setIsMobileMenuOpen(false); setShowBookSlot(true); }} className={styles.mobileCtaBtn}>
                 Book Slot
               </button>

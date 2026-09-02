@@ -19,7 +19,8 @@ export const OurStorySection = () => {
             <img 
               src="/service_ceramic.png" 
               alt="Spin In Detailing Studio Story" 
-              className={styles.storyImage} 
+              className={`${styles.image} ${styles.primaryImage}`}
+              loading="lazy"
             />
             <div className={styles.imageOverlay} />
             <div className={styles.imageBadge}>

@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className={`container ${styles.footerContent}`}>
         <div className={styles.brandSection}>
           <div className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src={spinLogo} alt="Spin In Logo" className={styles.logoImage} />
+            <img src={spinLogo} alt="Spin In Logo" className={styles.logoImage} loading="lazy" />
           </div>
           <p className={styles.description}>
             Coimbatore's premier destination for high-end automotive protection and aesthetic restoration.
