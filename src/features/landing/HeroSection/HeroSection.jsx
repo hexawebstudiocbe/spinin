@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '../../../components/ui/Button/Button';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
+import { BookSlotModal } from '../../../components/ui/BookSlotModal/BookSlotModal';
 import styles from './HeroSection.module.css';
 
 export const HeroSection = () => {
@@ -14,12 +15,21 @@ export const HeroSection = () => {
     '/car4.webp'
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showBookSlot, setShowBookSlot] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -78,14 +88,21 @@ export const HeroSection = () => {
             <Button href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }}>
               View Services
             </Button>
-            <Button variant="outline" href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
-              Our Process
-            </Button>
+            {isMobile ? (
+              <Button variant="outline" onClick={() => setShowBookSlot(true)}>
+                Contact Us
+              </Button>
+            ) : (
+              <Button variant="outline" href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                Our Process
+              </Button>
+            )}
           </div>
         </div>
       </div>
 
       <ScrollDown targetId="story" />
+      <BookSlotModal isOpen={showBookSlot} onClose={() => setShowBookSlot(false)} />
     </section>
   );
 };
