@@ -17,6 +17,7 @@ export const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [showBookSlot, setShowBookSlot] = useState(false);
+  const [isPickupExpanded, setIsPickupExpanded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,11 +52,12 @@ export const HeroSection = () => {
 
         {/* Left Side: Text Content */}
         <div className={styles.content}>
-          <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`} style={{ fontSize: '2.5rem' }}>
-            Premium Car Detailing & Ceramic Coating in Coimbatore
+          <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+            <span style={{ color: "red" }} className="animate-typewriter-continuous">PREMIUM</span> Car Detailing & Ceramic Coating, <br/>
+            <span className={styles.originText}>Originating from Coimbatore</span>
           </h1>
-          <p className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>
-            <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud!
+          <p className={`${styles.subTitle} animate-typewriter-continuous ${isVisible ? 'is-visible' : ''}`}>
+            <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud !
           </p>
 
           <div className={`${styles.descriptionBlock} animate-typewriter stagger-2 ${isVisible ? 'is-visible' : ''}`}>
@@ -67,21 +69,42 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          <div className={`${styles.pickupCard} animate-premium stagger-3 ${isVisible ? 'is-visible' : ''}`}>
-            <div className={styles.pickupCardIcon}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="1" y="3" width="15" height="13" />
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-                <circle cx="5.5" cy="18.5" r="2.5" />
-                <circle cx="18.5" cy="18.5" r="2.5" />
-              </svg>
+          <div 
+            className={`${styles.pickupCard} animate-premium stagger-3 ${isVisible ? 'is-visible' : ''}`}
+            onClick={() => setIsPickupExpanded(!isPickupExpanded)}
+          >
+            <div className={styles.pickupCardHeader}>
+              <div className={styles.pickupCardIcon}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </div>
+              <div className={styles.pickupCardContent}>
+                <h4 className={styles.pickupCardTitle}>Doorstep Pickup & Drop</h4>
+                <p className={styles.pickupCardText}>
+                  We pick up, detail to perfection, and return your vehicle safely. Unmatched convenience.
+                </p>
+              </div>
+              <div className={`${styles.chevron} ${isPickupExpanded ? styles.chevronUp : ''}`}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
             </div>
-            <div className={styles.pickupCardContent}>
-              <h4 className={styles.pickupCardTitle}>Doorstep Pickup & Drop</h4>
-              <p className={styles.pickupCardText}>
-                We pick up, detail to perfection, and return your vehicle safely. Unmatched convenience.
-              </p>
-            </div>
+            
+            {isPickupExpanded && (
+              <div className={styles.pickupDropdown}>
+                <ol className={styles.pickupList}>
+                  <li><span>1</span> Book a slot</li>
+                  <li><span>2</span> Schedule for pick up</li>
+                  <li><span>3</span> Report your delivery time according to the service chosen</li>
+                  <li><span>4</span> Deliver at same location on time</li>
+                </ol>
+              </div>
+            )}
           </div>
 
           <div className={`${styles.actions} animate-premium stagger-4 ${isVisible ? 'is-visible' : ''}`}>

@@ -165,3 +165,23 @@
 .animate-typewriter.is-visible {
   animation: typeWriterReveal 1.5s ease-in-out forwards;
 }
+
+@keyframes typeWriterInfinite {
+  0%, 15% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  45%, 55% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  85%, 100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+}
+
+.animate-typewriter-continuous {
+  opacity: 1;
+  animation: typeWriterInfinite 4s ease-in-out infinite;
+  display: inline-block;
+  padding-right: 0.1em;
+  border-right: 2px solid var(--color-red);
+}

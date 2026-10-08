@@ -31,6 +31,34 @@ const brands = [
   {
     name: 'Turtle Wax',
     logoUrl: '/turtltwax.png',
+  },
+  {
+    name: 'Adam\'s Polishes',
+    logoUrl: '/adams.png',
+  },
+  {
+    name: 'CarPro',
+    logoUrl: '/Carpro_Logo.png',
+  },
+  {
+    name: 'Chemical Guys',
+    logoUrl: '/chemical_guys.png',
+  },
+  {
+    name: 'Garware',
+    logoUrl: '/garware.png',
+  },
+  {
+    name: 'Detroit Surface Care',
+    logoUrl: '/detroit_surface_care.png',
+  },
+  {
+    name: 'P&S Detail Products',
+    logoUrl: '/ps_professional_detail_products.png',
+  },
+  {
+    name: 'Ultra Guard PPF',
+    logoUrl: '/ultra_guard_ppf.png',
   }
 ];
 

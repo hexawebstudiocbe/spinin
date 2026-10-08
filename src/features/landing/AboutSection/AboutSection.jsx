@@ -1,13 +1,10 @@
 import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
+import { Button } from '../../../components/ui/Button/Button';
 import styles from './AboutSection.module.css';
 
-const steps = [
-  { num: '1', title: 'Schedule Slot', desc: 'Book online or via WhatsApp.' },
-  { num: '2', title: 'Premium Transit', desc: 'Fully-insured pickup from your doorstep.' },
-  { num: '3', title: 'Spotless Delivery', desc: 'We deliver your vehicle back in pristine condition.' }
-];
+
 
 export const AboutSection = () => {
   const { elementRef, isVisible } = useIntersectionObserver();
@@ -64,19 +61,18 @@ export const AboutSection = () => {
             </p>
           </div>
           <div className={`${styles.timeline} animate-fade-in-up stagger-2 ${isVisible ? 'is-visible' : ''}`}>
-            <h4 className={styles.timelineHeader}>Doorstep Pickup & Drop Available:</h4>
-            <div className={styles.stepsContainer}>
-              {steps.map((step, idx) => (
-                <div key={idx} className={styles.stepCard}>
-                  <div className={styles.stepBadge}>
-                    <span>{step.num}</span>
-                  </div>
-                  <div className={styles.stepContent}>
-                    <h4 className={styles.stepTitle}>{step.title}</h4>
-                    <p className={styles.stepDesc}>{step.desc}</p>
-                  </div>
-                </div>
-              ))}
+            <p className={styles.paragraph} style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#ccc' }}>
+              We appreciate your enthusiasm on protecting your car. On behalf of Spin In, we give you packages up to a year worth saving big money. Check below!
+            </p>
+            <div style={{ background: 'linear-gradient(145deg, rgba(20,20,20,0.9) 0%, rgba(40,10,10,0.9) 100%)', border: '1px solid rgba(255, 0, 0, 0.3)', borderRadius: '16px', padding: '2.5rem', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+              <h3 style={{ color: '#fff', fontSize: '2.2rem', marginBottom: '2rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
+                <span className="text-red">Your</span> Packages
+              </h3>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+                <Button href="#products" className={styles.actionBtn}>
+                  View Packages with Details
+                </Button>
+              </div>
             </div>
           </div>
         </div>
