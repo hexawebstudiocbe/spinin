@@ -54,14 +54,14 @@ export const HeroSection = () => {
         <div className={styles.content}>
           <div className={styles.titleWrapper}>
             <h1 className={`${styles.mainTitle} animate-premium stagger-1 ${isVisible ? 'is-visible' : ''}`}>
-              <span className={styles.premiumTyping}>PREMIUM</span> Car Detailing & Ceramic Coating,
+              <span className={styles.premiumShimmer}>PREMIUM</span> Car Detailing & Ceramic Coating,
             </h1>
             <h2 className={`${styles.subTitle} animate-premium stagger-2 ${isVisible ? 'is-visible' : ''}`}>
               Originating from Coimbatore
             </h2>
-            <div className={`${styles.typingContainer} stagger-2 ${isVisible ? 'is-visible' : ''}`}>
-              <p className={styles.typingText}>
-                <span className={styles.redLetter}>D</span>rive Clean, <span className={styles.redLetter}>D</span>rive Proud!
+            <div className={`${styles.driveProudContainer} stagger-2 ${isVisible ? 'is-visible' : ''}`}>
+              <p className={styles.driveProudText}>
+                <span className={styles.premiumShimmer}>D</span>rive Clean, <span className={styles.premiumShimmer}>D</span>rive Proud!
               </p>
             </div>
           </div>
