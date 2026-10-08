@@ -52,12 +52,19 @@ export const HeroSection = () => {
 
         {/* Left Side: Text Content */}
         <div className={styles.content}>
-          <h1 className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`} style={{ fontSize: '2.5rem' }}>
-            Premium Car Detailing & Ceramic Coating in Coimbatore
-          </h1>
-          <p className={`${styles.title} animate-flip-in stagger-1 ${isVisible ? 'is-visible' : ''}`} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>
-            <span style={{ color: "red" }}>D</span>rive Clean, <span style={{ color: "red" }}>D</span>rive Proud!
-          </p>
+          <div className={styles.titleWrapper}>
+            <h1 className={`${styles.mainTitle} animate-premium stagger-1 ${isVisible ? 'is-visible' : ''}`}>
+              <span className={styles.premiumTyping}>PREMIUM</span> Car Detailing & Ceramic Coating,
+            </h1>
+            <h2 className={`${styles.subTitle} animate-premium stagger-2 ${isVisible ? 'is-visible' : ''}`}>
+              Originating from Coimbatore
+            </h2>
+            <div className={`${styles.typingContainer} stagger-2 ${isVisible ? 'is-visible' : ''}`}>
+              <p className={styles.typingText}>
+                <span className={styles.redLetter}>D</span>rive Clean, <span className={styles.redLetter}>D</span>rive Proud!
+              </p>
+            </div>
+          </div>
 
           <div className={`${styles.descriptionBlock} animate-typewriter stagger-2 ${isVisible ? 'is-visible' : ''}`}>
             <span className={styles.highlightText}>Clean | Protect | Perfect </span><br />
