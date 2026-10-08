@@ -71,29 +71,10 @@
 .title {
   color: #ffffff;
   font-size: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  line-height: 1.15;
-  margin-bottom: var(--spacing-md);
-  letter-spacing: -1.5px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
-}
-
-.originText {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #cccccc;
-  letter-spacing: 1px;
-}
-
-.subTitle {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  margin-top: 1rem;
+  line-height: 1.2;
   margin-bottom: var(--spacing-md);
+  letter-spacing: -0.5px;
 }
 
 .descriptionBlock {
@@ -345,19 +326,6 @@
   .title {
     font-size: 1.75rem;
     margin-bottom: 0.6rem;
-    letter-spacing: -0.5px;
-  }
-
-  .originText {
-    font-size: 1.25rem;
-    display: inline-block;
-    margin-top: 0.25rem;
-  }
-
-  .subTitle {
-    font-size: 1.15rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.75rem;
   }
 
   .descriptionBlock {
