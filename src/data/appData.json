@@ -2,7 +2,7 @@
   "services": [
     {
       "title": "BASIC CAR WASH",
-      "whatItDoes": "Exterior Cleaning for a Fresh Look",
+      "whatItDoes": "Exterior wash + basic vacuuming + interior plastic dressing. Simple cleaning for regular maintenance.",
       "image": "/Basic Car Wash Service Card.png",
       "prices": {
         "Hatchback": "₹ 400",
@@ -13,7 +13,7 @@
     },
     {
       "title": "PREMIUM WASH & DETAILING",
-      "whatItDoes": "Deep Cleaning with Premium Care",
+      "whatItDoes": "Deep cleaning with two-step washing: foam/touchless pre-wash + contact wash to remove heavy dirt and contamination. Includes interior detailing, leather cleaning, plastic coating/dressing, glass cleaning & glass coating, plus removal of visible contamination such as salt marks, tar, stains and other deposits.",
       "image": "/premium.png",
       "prices": {
         "Hatchback": "₹ 1,200",
@@ -24,7 +24,7 @@
     },
     {
       "title": "INTERIOR DETAILING (ONLY)",
-      "whatItDoes": "Complete Interior Cleaning",
+      "whatItDoes": "Deep cleaning of seats, carpets, dashboard, plastics, doors and other interior surfaces, removing dirt, stains and buildup.",
       "image": "/service_interior.png",
       "prices": {
         "Hatchback": "₹ 1,000",
@@ -35,7 +35,7 @@
     },
     {
       "title": "WAXING",
-      "whatItDoes": "Enhanced Shine & Protection",
+      "whatItDoes": "Adds a smooth, glossy finish and a temporary protective layer to the paint.",
       "image": "/service_ceramic_new.jpg",
       "prices": {
         "Hatchback": "₹ 1,000",
@@ -46,7 +46,7 @@
     },
     {
       "title": "PAINT CORRECTION",
-      "whatItDoes": "Remove Swirls, Scratches & Restore Gloss",
+      "whatItDoes": "Machine polishing that removes/reduces swirl marks, light scratches, oxidation and paint imperfections, restoring gloss and clarity.",
       "image": "/service_paint.png",
       "prices": {
         "Hatchback": "₹ 7,500",
@@ -57,7 +57,7 @@
     },
     {
       "title": "CERAMIC COATING (4 YEARS)",
-      "whatItDoes": "Long Lasting Shine & Protection",
+      "whatItDoes": "A durable protective coating that bonds to the paint, providing gloss, hydrophobic water-beading and protection against environmental contamination.",
       "image": "/service_ceramic.png",
       "prices": {
         "Hatchback": "₹ 15,000",
@@ -68,7 +68,7 @@
     },
     {
       "title": "GRAPHENE COATING (5 YEARS)",
-      "whatItDoes": "Next Level Protection & Durability",
+      "whatItDoes": "Advanced coating protection designed to provide high gloss, water repellency and a durable protective layer over the paint.",
       "image": "/service_graphene.png",
       "prices": {
         "Hatchback": "₹ 17,000",
@@ -79,7 +79,7 @@
     },
     {
       "title": "PPF (PAINT PROTECTION FILM)",
-      "whatItDoes": "Full Vehicle Coverage",
+      "whatItDoes": "A transparent protective film applied to the paint to help protect against stone chips, scratches, road debris and minor impacts.",
       "image": "/service_ppf.png",
       "prices": {
         "Hatchback": "₹ 65,000",

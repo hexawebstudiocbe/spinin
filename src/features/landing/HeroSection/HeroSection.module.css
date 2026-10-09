@@ -84,7 +84,7 @@
 }
 
 .premiumShimmer {
-  background: linear-gradient(90deg, var(--color-red) 0%, #ff8a8a 50%, var(--color-red) 100%);
+  background: linear-gradient(90deg, #d4af37 0%, #fff2cd 50%, #d4af37 100%);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;

@@ -117,15 +117,9 @@ export const HeroSection = () => {
             <Button href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }}>
               View Services
             </Button>
-            {isMobile ? (
-              <Button variant="outline" onClick={() => setShowBookSlot(true)}>
-                Contact Us
-              </Button>
-            ) : (
-              <Button variant="outline" href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                Our Process
-              </Button>
-            )}
+            <Button variant="outline" onClick={() => setShowBookSlot(true)}>
+              Contact Us
+            </Button>
           </div>
         </div>
       </div>
