@@ -54,7 +54,7 @@ export const HeroSection = () => {
         <div className={styles.content}>
           <div className={styles.titleWrapper}>
             <h1 className={`${styles.mainTitle} animate-premium stagger-1 ${isVisible ? 'is-visible' : ''}`}>
-              <span className={styles.premiumShimmer}>PREMIUM</span> Car Detailing & Ceramic Coating,
+              <span className={styles.premiumShimmer}>PREMIUM</span> Car Detailing,
             </h1>
             <h2 className={`${styles.subTitle} animate-premium stagger-2 ${isVisible ? 'is-visible' : ''}`}>
               Originating from Coimbatore
