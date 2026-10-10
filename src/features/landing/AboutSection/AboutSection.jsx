@@ -1,7 +1,6 @@
 import { SectionTitle } from '../../../components/ui/SectionTitle/SectionTitle';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { ScrollDown } from '../../../components/ui/ScrollDown/ScrollDown';
-import { Button } from '../../../components/ui/Button/Button';
 import styles from './AboutSection.module.css';
 
 
@@ -59,30 +58,6 @@ export const AboutSection = () => {
               Your car. Your passion. Our care.<br/>
               Welcome to Spin In.
             </p>
-          </div>
-          <div className={`${styles.timeline} animate-fade-in-up stagger-2 ${isVisible ? 'is-visible' : ''}`}>
-            <p className={styles.paragraph} style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#ccc' }}>
-              We appreciate your enthusiasm on protecting your car. On behalf of Spin In, we give you packages up to a year worth saving big money. Check below!
-            </p>
-            <div style={{ background: 'linear-gradient(145deg, rgba(20,20,20,0.9) 0%, rgba(40,10,10,0.9) 100%)', border: '1px solid rgba(255, 0, 0, 0.3)', borderRadius: '16px', padding: '1.5rem', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', maxWidth: '550px', margin: '0 auto' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '0.5rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
-                <span className="text-red">Personalized</span> Detailor
-              </h3>
-              <p style={{ color: '#ccc', fontSize: '1rem', marginBottom: '1.2rem', lineHeight: '1.5' }}>
-                Every vehicle has unique needs based on its current condition and usage.<br />
-                Let our experts inspect your car and recommend a personalized detailing package.
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button 
-                  href="https://wa.me/919677767123?text=Hi!%20I%20would%20like%20to%20book%20a%20personalized%20detailer%20for%20my%20car."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.actionBtn}
-                >
-                  Book Your Personalized Detailor
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
 
