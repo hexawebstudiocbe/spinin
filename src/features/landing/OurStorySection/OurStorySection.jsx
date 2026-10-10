@@ -84,7 +84,6 @@ export const OurStorySection = () => {
         </div>
 
       </div>
-      <ScrollDown targetId="services" />
     </section>
   );
 };

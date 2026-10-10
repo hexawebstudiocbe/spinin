@@ -98,7 +98,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-      <ScrollDown targetId="contact" />
     </section>
   );
 };

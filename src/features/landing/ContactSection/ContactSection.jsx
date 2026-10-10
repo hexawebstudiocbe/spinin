@@ -316,7 +316,6 @@ export const ContactSection = () => {
         </div>
         
       </div>
-      <ScrollDown targetId="footer" />
     </section>
   );
 };

@@ -46,7 +46,6 @@ export const ServicesSection = () => {
             </div>
           ))}
         </div>
-        <ScrollDown targetId="about" />
       </section>
       
       {selectedService && (

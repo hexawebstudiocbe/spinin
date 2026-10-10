@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Header } from './components/layout/Header/Header';
 import { Footer } from './components/layout/Footer/Footer';
 import { SocialFloater } from './components/ui/SocialFloater/SocialFloater';
+import { ScrollDown } from './components/ui/ScrollDown/ScrollDown';
 import { HeroSection } from './features/landing/HeroSection/HeroSection';
 import { OurStorySection } from './features/landing/OurStorySection/OurStorySection';
 import { AboutSection } from './features/landing/AboutSection/AboutSection';
@@ -35,6 +36,7 @@ function App() {
       </main>
 
       <SocialFloater />
+      <ScrollDown />
       <Footer />
     </div>
   );

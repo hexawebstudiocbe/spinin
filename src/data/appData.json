@@ -16,10 +16,10 @@
       "whatItDoes": "Deep cleaning with two-step washing: foam/touchless pre-wash + contact wash to remove heavy dirt and contamination. Includes interior detailing, leather cleaning, plastic coating/dressing, glass cleaning & glass coating, plus removal of visible contamination such as salt marks, tar, stains and other deposits.",
       "image": "/premium.png",
       "prices": {
-        "Hatchback": "₹ 1,200",
-        "Sedan": "₹ 1,500",
-        "SUV": "₹ 1,800",
-        "7-Seater": "₹ 2,200"
+        "Hatchback": "₹ 2,000",
+        "Sedan": "₹ 2,500",
+        "SUV": "₹ 2,800",
+        "7-Seater": "₹ 3,000"
       }
     },
     {
@@ -27,10 +27,10 @@
       "whatItDoes": "Deep cleaning of seats, carpets, dashboard, plastics, doors and other interior surfaces, removing dirt, stains and buildup.",
       "image": "/service_interior.png",
       "prices": {
-        "Hatchback": "₹ 1,000",
-        "Sedan": "₹ 1,400",
-        "SUV": "₹ 1,600",
-        "7-Seater": "₹ 1,800"
+        "Hatchback": "₹ 1,300",
+        "Sedan": "₹ 1,600",
+        "SUV": "₹ 1,900",
+        "7-Seater": "₹ 2,200"
       }
     },
     {
